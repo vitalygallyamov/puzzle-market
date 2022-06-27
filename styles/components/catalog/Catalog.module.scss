@@ -1,0 +1,354 @@
+// .nftMarketplace-title {
+//     color: #363870;
+//     font-size: 32px;
+//     font-weight: 500;
+//     margin-top: 56px;
+//     padding: 0 10px;
+//     box-sizing: border-box;
+// }
+
+// .nftMarketplace-desc {
+//     color: #363870;
+//     font-size: 14px;
+//     font-weight: 400;
+//     margin-bottom: 24px;
+//     margin-top: 8px;
+//     padding: 0 10px;
+//     box-sizing: border-box;
+// }
+
+// .nftMarketplace-loadMore {
+//     display: flex;
+//     justify-content: center;
+//     padding: 10px;
+// }
+
+// .nftMarketplace-loadMore .puzzle-nftMarketplace__button {
+//     padding: 0 15px;
+//     border: 1px solid #7075E9;
+// }
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 10px;
+    grid-gap: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+    align-self: center;
+}
+
+// .nftMarketplace-pageWrapper {
+//     width: 100%;
+//     box-sizing: border-box;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.puzzle-nftMarketplace__nftCard {
+    width: 278px;
+    height: 426px;
+    background: #FFFFFF;
+    border: 1px solid #F1F2FE;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.puzzle-nftMarketplace__nftSourceWrap {
+    position: relative;
+    background-color: rgb(198, 201, 244);
+}
+
+.puzzle-nftMarketplace__nftImage {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.puzzle-nftMarketplace__nftImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.puzzle-nftMarketplace__nftImage, .puzzle-nftMarketplace__nftVideo {
+    display: block;
+    height: 280px;
+}
+
+.puzzle-nftMarketplace__nftVideo {
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.puzzle-nftMarketplace__nftVideo video {
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    position: absolute;
+    left: -10px;
+    display: block;
+    object-fit: cover;
+}
+
+.puzzle-nftMarketplace-flyBlock {
+    background: rgba(24, 25, 49, 0.88);
+    border-radius: 20px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    height: 24px;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.puzzle-nftMarketplace__characteristics {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.puzzle-nftMarketplace__achievements {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    height: 35px;
+}
+.puzzle-nftMarketplace__achievements img {
+    height: 100%;
+}
+
+.puzzle-nftMarketplace-flyBlock_normal {
+    position: static;
+    padding: 0px 4px;
+    cursor: auto;
+    margin-left: 10px;
+}
+
+.puzzle-nftMarketplace-flyBlock_red {
+    background: #ED827E;
+}
+
+.puzzle-nftMarketplace-flyBlock_green {
+    background: #5d9564;
+}
+
+.puzzle-nftMarketplace-flyBlock_purple {
+    background: #7075E9;
+}
+
+.puzzle-nftMarketplace-flyBlock_right {
+    right: 8px;
+    left: auto;
+}
+
+.puzzle-nftMarketplace-flyBlock__text {
+    margin-right: 4px;
+    margin-left: 4px;
+    line-height: 16px;
+    height: 16px;
+}
+
+.puzzle-nftMarketplace__accountIcon {
+    margin-left: 4px;
+    width: 16px;
+    border-radius: 8px;
+    display: block;
+}
+
+.puzzle-nftMarketplace__heartIcon {
+    margin-left: 8px;
+}
+
+.puzzle-nftMarketplace__info {
+    padding: 16px;
+    height: 76px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.puzzle-nftMarketplace__nftCollection {
+    font-size: 14px;
+    line-height: 20px;
+    color: #8082C5;
+}
+.puzzle-nftMarketplace__nftCollection a {
+    color: #8082C5;
+}
+.puzzle-nftMarketplace__nftCollection a:hover {
+    text-decoration: underline;
+}
+
+.puzzle-nftMarketplace__nftName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #363870;
+}
+
+.puzzle-nftMarketplace__actions {
+    border-top: 1px solid #F1F2FE;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.puzzle-nftMarketplace__likeBlock {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 14px;
+    color: #6563DD;
+    display: flex;
+    padding: 4px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.puzzle-nftMarketplace__likeCount {
+    margin-left: 4px;
+}
+
+.puzzle-nftMarketplace__likeBlock:hover {
+    background-color: #F8F8FF;
+}
+
+
+.puzzle-nftMarketplace__button, .puzzle-gateway__button {
+    background: #7075E9;
+    border-radius: 10px;
+    color: #fff;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0 4px;
+}
+
+.puzzle-gateway__button {
+    width: 144px;
+}
+
+.puzzle-nftMarketplace__button_cancel {
+    background: #fff;
+    color: #7075E9;
+    border: 1px solid #F1F2FE;
+}
+
+.puzzle-nftMarketplace__button_disabled {
+    background: #C6C9F4;
+    cursor: not-allowed;
+}
+
+.puzzle-nftMarketplace__priceCaption {
+    font-size: 12px;
+    color: #8082C5;
+}
+
+.puzzle-nftMarketplace__priceValue {
+    color: #363870;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.puzzle-nftMarketplace__priceUsdn {
+    font-size: 12px;
+    color: #363870;
+    opacity: 0.9;
+    white-space: nowrap;
+}
+
+.puzzle-nftMarketplace__bidsLink {
+    font-size: 12px;
+    color: #8082C5;
+    white-space: nowrap;
+}
+
+.puzzle-nftMarketplace__bidsLink:hover {
+    text-decoration: underline;
+}
+
+.puzzle-nftMarketplace__asset {
+    display: flex;
+    align-items: center;
+}
+
+/* @media (max-width: 1180px) {
+    .puzzle-nftMarketplace {
+        width: 880px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .puzzle-nftMarketplace {
+        width: 580px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
+
+@media only screen and (min-width : 320px) {
+    .puzzle-nftMarketplace {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .puzzle-nftMarketplace__nftCard {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+    .puzzle-nftMarketplace {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .puzzle-nftMarketplace {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .puzzle-nftMarketplace {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .nftMarketplace-title, .nftMarketplace-desc {
+        align-self: auto;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    .puzzle-nftMarketplace {
+        grid-template-columns: repeat(4, 1fr);
+        width: 1160px;
+    }
+    .nftMarketplace-title, .nftMarketplace-desc {
+        width: 1160px;
+        align-self: center;
+    }
+    /* .nftMarketplace-pageWrapper {
+        width: 1160px;
+    } */
+}

@@ -6,6 +6,7 @@ interface IButtonParams {
     width?: string;
     disabled?: boolean;
 }
+
 /**
  * Button
  * @constructor
