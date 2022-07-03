@@ -1,13 +1,18 @@
 import type {NextPage} from 'next'
-import {ChangeEvent, useState} from 'react';
+import {ChangeEvent, useState, ReactElement} from 'react';
 
-import Title from '../components/title';
-import Button from '../components/button';
+import Title from 'components/title';
+import Button from 'components/button';
 
-import UploadIcon from '../assets/icons/upload.svg';
-import CloseIcon from '../assets/icons/close.svg';
+import Layout from 'components/layout'
 
-import styles from '../styles/pages/Create.module.scss'
+import UploadIcon from 'assets/icons/upload.svg';
+import CloseIcon from 'assets/icons/close.svg';
+
+import type { NextPageWithLayout } from './_app'
+
+import styles from 'styles/pages/Create.module.scss'
+import Index from "./index";
 
 interface ISourceInfo {
     originalFile: File,
@@ -19,7 +24,7 @@ interface ISourceInfo {
     compressPercent?: string;
 }
 
-const Create: NextPage = () => {
+const Create: NextPageWithLayout = () => {
     // const { accountStore, notificationStore } = useStores();
 
     const [creating, setCreating] = useState<boolean>(false);
@@ -310,6 +315,14 @@ const Create: NextPage = () => {
             </div>
         </div>
     );
+}
+
+Create.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+            <Layout>{page}</Layout>
+        </Layout>
+    )
 }
 
 export default Create;

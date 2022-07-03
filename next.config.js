@@ -13,6 +13,9 @@ const nextConfig = {
       use: ['@svgr/webpack'],
     })
     return config;
+  },
+  images: {
+    domains: ['ipfs.io', 'wavesducks.com']
   }
 }
 

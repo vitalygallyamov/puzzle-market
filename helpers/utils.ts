@@ -1,4 +1,6 @@
+import qs from 'querystring';
 import axios, { AxiosRequestConfig } from 'axios';
+
 import {
     NODE
 } from './addresses';
@@ -30,11 +32,15 @@ interface IAssetPriceInfo {
 /**
  * Get all NFT from address
  * @param address Account address
- * @param limit 
- * @returns 
+ * @param limit
+ * @param after
+ * @returns
  */
-export const getAllAddressNFT = async (address: string, limit: number = 1000) => {
-    const result = await axios.get<IAssetsNftResponse>(`${NODE}/assets/nft/${address}/limit/${limit}`);
+export const getAllAddressNFT = async (address: string, limit: number = 1000, after?: string) => {
+    // return {data: `${NODE}/assets/nft/${address}/limit/${limit}`}
+    const result = await axios.get<IAssetsNftResponse>(`${NODE}/assets/nft/${address}/limit/${limit}`, {
+        params: after ? {after} : {}
+    });
     return result.data;
 }
 
@@ -44,8 +50,29 @@ export const getAllAddressNFT = async (address: string, limit: number = 1000) =>
  * @param params 
  * @returns 
  */
-export const getAllAddressData = async (address: string, params: AxiosRequestConfig<{matches?: string}> = {}) => {
-    const result = await axios.get<IAddressDataResponse>(`${NODE}/addresses/data/${address}`, params);
+export const getAllAddressData = async (address: string, params: {matches?: string} = {}) => {
+    const result = await axios.get<IAddressDataResponse>(`${NODE}/addresses/data/${address}`, {
+        paramsSerializer: params => {
+            return qs.stringify(params)
+        },
+        params
+    });
+    return result.data;
+}
+
+/**
+ * Get all data from address
+ * @param address Account address
+ * @param params
+ * @returns
+ */
+export const getAssetDetails = async (params: {id?: string[]} = {}) => {
+    const result = await axios.get<IAssetsNftResponse>(`${NODE}/assets/details`, {
+        paramsSerializer: params => {
+            return qs.stringify(params)
+        },
+        params
+    });
     return result.data;
 }
 
